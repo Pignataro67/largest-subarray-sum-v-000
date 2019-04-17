@@ -1,23 +1,23 @@
-// function largestSubarraySum(array) {
-//   let sequence = 0
-//   let largest = 0
+function largestSubarraySum(array) {
+  let sequence = 0
+  let largest = 0
 
-//   for (let i = 0; i < array.length; i++) {
-//     sequence = array[i]
-//     if (sequence > largest) {
-//       largest = sequence
-//     }
-//     for (let l = i + 1; l < array.length; l++) {
-//       sequence = array[l] + sequence
-//       if (sequence > largest) {
-//         largest = sequence
-//       }
-//     }
-//   }
+  for (let i = 0; i < array.length; i++) {
+    sequence = array[i]
+    if (sequence > largest) {
+      largest = sequence
+    }
+    for (let l = i + 1; l < array.length; l++) {
+      sequence = array[l] + sequence
+      if (sequence > largest) {
+        largest = sequence
+      }
+    }
+  }
   
-//   return largest
+  return largest
 
-// }
+}
 
 // goal: derive the largest sum from a subarray within an array
 // brute force approach [O(n^2)]: find every possible subarray, get the sum, and if the sum is higher than the current record, that becomes the sum
