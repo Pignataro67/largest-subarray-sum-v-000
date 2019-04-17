@@ -35,7 +35,7 @@ function largestSubarraySum(array) {
   let biggest = 0
   for (let i=0; i<array.length; i++) {
     sequence = Math.max(0, sequence + array[i])
-    biggest = Math.max(biggest, sequence)
+    biggest = Math.max(sequence, biggest)
   }
   return biggest
 }
